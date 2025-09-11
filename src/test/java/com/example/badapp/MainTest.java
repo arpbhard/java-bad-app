@@ -1,3 +1,3 @@
-public void testDatabaseQueryInjection() {
+public void testDivisionByZero() {
     // Test logic here
 }
