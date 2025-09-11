@@ -18,7 +18,7 @@ public class UserController {
         try {
             Statement s = DbUtil.getInstance().connection.createStatement();
             s.executeUpdate("INSERT INTO users(name,email) VALUES('" + name + "','" + email + "')");
-PreparedStatement stmt = conn.prepareStatement(query);
+        } catch (Exception ex){}
     }
 
     public boolean validate(String email){
