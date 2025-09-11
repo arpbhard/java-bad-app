@@ -1,7 +1,6 @@
-public void testMd5ExceptionHandling() {
-    String input = "Test";
-    String expectedResult = null;
-    PowerMockito.mockStatic(java.security.MessageDigest.class);
-    PowerMockito.when(java.security.MessageDigest.getInstance("MD5")).thenThrow(new NoSuchAlgorithmException());
-    assertEquals(expectedResult, Utils.md5(input));
+public void testMd5ValidInput() {
+    String input = "password123";
+    String expected = "482c811da5d5b4bc6d497ffa98491e38";
+    String result = Utils.md5(input);
+    assertEquals(expected, result);
 }
