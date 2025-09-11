@@ -1,3 +1,3 @@
-public void testDivisionByZero() {
+public void testNullPointerException() {
     // Test logic here
 }
