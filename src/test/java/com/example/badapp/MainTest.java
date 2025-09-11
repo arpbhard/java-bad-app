@@ -1,3 +1,3 @@
-public void testDatabaseQueryValidInput() {
+public void testDatabaseQueryInjection() {
     // Test logic here
 }
