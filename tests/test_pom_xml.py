@@ -1,1 +1,14 @@
-ë¹ë­´ï¹ï~øåşúë^œëŞ¸åşôéşåşüéŞœÛÍ½İ­ÛM´ÛM´Û}´ç~¹ïùïMÛM´ÛM´Û}´ç¹ï~øÑ­´ÛM´ÛNµï~÷ëöï´çöï¹ÛM´Û}´çNœë^·ë¼éşœë¹ïm´ë^÷ï~¹ïnøëŞŸéíÛM´ÛM´Û}´ç¹ë^öëŸï¾
+def test_valid_pom_structure():
+    assert '<project>' in pom_xml
+    assert '<modelVersion>4.0.0</modelVersion>' in pom_xml
+    assert '<groupId>com.example</groupId>' in pom_xml
+    assert '<artifactId>badapp</artifactId>' in pom_xml
+    assert '<version>1.0.0</version>' in pom_xml
+    assert '<dependencies>' in pom_xml
+    assert '<dependency>' in pom_xml
+    assert '<groupId>commons-io</groupId>' in pom_xml
+    assert '<artifactId>commons-io</artifactId>' in pom_xml
+    assert '<version>2.11.0</version>' in pom_xml
+    assert '</dependency>' in pom_xml
+    assert '</dependencies>' in pom_xml
+    assert '</project>' in pom_xml
