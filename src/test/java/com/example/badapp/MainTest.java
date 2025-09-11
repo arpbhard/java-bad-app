@@ -1,10 +1,9 @@
 @Test
-public void testUserQueryWithNullInput() {
+public void testReferenceComparison() {
     // Setup
     Main main = new Main();
-    String[] args = {};
     // Execution
-    main.main(args);
+    main.main(new String[]{});
     // Assertion
     // Add appropriate assertions here
 }
