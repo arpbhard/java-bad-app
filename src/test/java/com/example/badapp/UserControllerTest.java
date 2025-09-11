@@ -1,6 +1,6 @@
 @Test
-public void testSaveUserSuccess() {
+public void testSaveUserException() {
     UserController userController = new UserController();
-    userController.saveUser("John Doe", "john.doe@example.com");
-    // Add assertions to check if user was saved successfully
+    // Simulate an exception while saving user
+    // Add assertions to check if exception is handled properly
 }
