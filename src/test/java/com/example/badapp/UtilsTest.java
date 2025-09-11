@@ -1,5 +1,7 @@
-public void testMd5EmptyInput() {
-    String input = "";
-    String expectedResult = "d41d8cd98f00b204e9800998ecf8427e";
+public void testMd5ExceptionHandling() {
+    String input = "Test";
+    String expectedResult = null;
+    PowerMockito.mockStatic(java.security.MessageDigest.class);
+    PowerMockito.when(java.security.MessageDigest.getInstance("MD5")).thenThrow(new NoSuchAlgorithmException());
     assertEquals(expectedResult, Utils.md5(input));
 }
