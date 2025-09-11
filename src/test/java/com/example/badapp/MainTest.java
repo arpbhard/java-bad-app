@@ -1,5 +1,5 @@
 @Test
-public void testReferenceComparison() {
+public void testArithmeticExceptionHandling() {
     // Setup
     Main main = new Main();
     // Execution
