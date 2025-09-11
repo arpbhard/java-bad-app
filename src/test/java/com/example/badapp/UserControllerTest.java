@@ -1,5 +1,5 @@
-public void testSaveUser_ValidNameAndEmail() {
+public void testSaveUserInvalidEmail() {
     UserController userController = new UserController();
-    userController.saveUser("John Doe", "john.doe@example.com");
+    userController.saveUser("Jane Doe", "jane.doeexample.com");
     // Add assertions here
 }
