@@ -1,2 +1,2 @@
-def test_pom_xml_contains_project_tag():
-    assert '<project>' in pom_xml
+def test_dependency_version_is_correct():
+    assert pom_xml.contains('<version>2.11.0</version>')
