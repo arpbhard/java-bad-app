@@ -1,6 +1,6 @@
 @Test
-public void testSaveUserException() {
+public void testValidateValidEmail() {
     UserController userController = new UserController();
-    // Simulate an exception while saving user
-    // Add assertions to check if exception is handled properly
+    boolean isValid = userController.validate("test@example.com");
+    // Add assertion to check if email is valid
 }
