@@ -1,5 +1,7 @@
-public void testRawQuery_InvalidSQL() {
+public void testFinalize() {
     DbUtil dbUtil = DbUtil.getInstance();
-    ResultSet resultSet = dbUtil.rawQuery("INVALID SQL");
-    assertNull(resultSet);
+    Connection connection = dbUtil.connection;
+    assertNotNull(connection);
+    dbUtil.finalize();
+    assertTrue(connection.isClosed());
 }
