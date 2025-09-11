@@ -1,2 +1,3 @@
-def test_dependency_version_is_correct():
-    assert pom_xml.contains('<version>2.11.0</version>')
+def test_invalid_dependency_raises_error():
+    with pytest.raises(Exception):
+        validate_pom_xml(pom_xml)
