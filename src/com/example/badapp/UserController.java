@@ -21,7 +21,7 @@ public class UserController {
         } catch (Exception ex){}
     }
 
-PreparedStatement stmt = conn.prepareStatement(query);
+    public boolean validate(String email){
         if(email.contains("@")){
             return true;
         } else return false;
