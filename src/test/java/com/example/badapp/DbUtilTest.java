@@ -1,5 +1,6 @@
 @Test
-public void testGetInstanceNotNull() {
+public void testRawQueryValidSQL() {
     DbUtil dbUtil = DbUtil.getInstance();
-    assertNotNull(dbUtil);
+    ResultSet resultSet = dbUtil.rawQuery("SELECT * FROM table");
+    assertNotNull(resultSet);
 }
