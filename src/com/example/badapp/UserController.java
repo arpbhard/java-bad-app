@@ -22,7 +22,7 @@ public class UserController {
     }
 
     public boolean validate(String email){
-PreparedStatement stmt = DbUtil.getInstance().connection.prepareStatement(query);
+        if(email.contains("@")){
             return true;
         } else return false;
     }
