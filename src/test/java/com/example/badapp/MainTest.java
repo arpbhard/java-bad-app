@@ -1,5 +1,5 @@
 @Test
-public void testArithmeticExceptionHandling() {
+public void testBackgroundThreadLogging() {
     // Setup
     Main main = new Main();
     // Execution
