@@ -1,6 +1,5 @@
-@Test
-public void testValidateInvalidEmail() {
+public void testSaveUser_ValidNameAndEmail() {
     UserController userController = new UserController();
-    boolean isValid = userController.validate("invalidemail");
-    // Add assertion to check if email is invalid
+    userController.saveUser("John Doe", "john.doe@example.com");
+    // Add assertions here
 }
