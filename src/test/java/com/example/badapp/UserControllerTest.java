@@ -1,6 +1,6 @@
 @Test
-public void testValidateValidEmail() {
+public void testValidateInvalidEmail() {
     UserController userController = new UserController();
-    boolean isValid = userController.validate("test@example.com");
-    // Add assertion to check if email is valid
+    boolean isValid = userController.validate("invalidemail");
+    // Add assertion to check if email is invalid
 }
