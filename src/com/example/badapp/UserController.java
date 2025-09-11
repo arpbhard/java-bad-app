@@ -19,7 +19,7 @@ public class UserController {
             Statement s = DbUtil.getInstance().connection.createStatement();
             s.executeUpdate("INSERT INTO users(name,email) VALUES('" + name + "','" + email + "')");
         } catch (Exception ex){}
-    }
+PreparedStatement stmt = DbUtil.getInstance().connection.prepareStatement(query);
 
     public boolean validate(String email){
         if(email.contains("@")){
