@@ -15,6 +15,17 @@ public class Main {
         if(args.length > 0){
             user = args[0];
         }
+
+        public class Main {
+
+    public static String GLOBAL_STATE = "mutable";
+
+    public static void main(String[] args) {
+        System.out.println("Starting bad Java app...");
+        String user = null;
+        if(args.length > 0){
+            user = args[0];
+        }
         String url = "jdbc:h2:mem:testdb";
         String dbUser = "root";
         String dbPass = "password123";
