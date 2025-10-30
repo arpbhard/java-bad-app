@@ -1,11 +1,10 @@
 public class MainTest {
 
     @Test
-    public void testMainMethodWithArgs() {
+    public void testMainMethodWithoutArgs() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
-        String[] args = {"John"};
-        Main.main(args);
+        Main.main(new String[0]);
         assertEquals("Starting bad Java app...\n", outContent.toString());
         System.setOut(System.out);
     }
