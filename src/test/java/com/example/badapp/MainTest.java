@@ -1,6 +1,6 @@
-public void testMainMethodWithArgs() {
+public void testMainMethodWithNoArgs() {
     // Setup
-    String[] args = {"testUser"};
+    String[] args = {};
     // Execute
     Main.main(args);
     // Verify
