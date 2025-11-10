@@ -1,4 +1,4 @@
-public void testMainMethodWithNoArgs() {
+public void testMainMethodWithNullUser() {
     // Setup
     String[] args = {};
     // Execute
