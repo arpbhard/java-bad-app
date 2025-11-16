@@ -1,7 +1,7 @@
 @Test
-public void testMainMethodWithUserArgument() {
+public void testMainMethodWithNullArgument() {
     ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     System.setOut(new PrintStream(outContent));
-    Main.main(new String[]{"John"});
+    Main.main(new String[]{null});
     assertEquals("Starting bad Java app...\n", outContent.toString());
 }
