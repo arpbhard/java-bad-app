@@ -1,8 +1,7 @@
-public void testMainMethodWithNullUser() {
-    // Setup
-    String[] args = {};
-    // Execute
-    Main.main(args);
-    // Verify
-    // Add assertions here
+@Test
+public void testMainMethodWithNoArguments() {
+    ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    System.setOut(new PrintStream(outContent));
+    Main.main(new String[]{});
+    assertEquals("Starting bad Java app...\n", outContent.toString());
 }
