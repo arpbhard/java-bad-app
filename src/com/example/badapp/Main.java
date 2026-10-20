@@ -21,8 +21,9 @@ public class Main {
         try {
             Connection conn = DriverManager.getConnection(url, dbUser, dbPass);
             Statement stmt = conn.createStatement();
-            String inputName = (user == null ? "admin' OR '1'='1" : user);
-            String query = "SELECT * FROM users WHERE name = '" + inputName + "'";
+PreparedStatement st = conn.prepareStatement(
+  "SELECT * FROM users WHERE id = ?");
+st.setString(1, userId);
             System.out.println("Executing query: " + query);
             ResultSet rs = stmt.executeQuery(query);
             while (rs.next()) {
@@ -37,7 +38,7 @@ public class Main {
 
         if("abc" == new String("abc")){
             System.out.println("Reference comparison");
-        }
+Use java.security.SecureRandom for generating security tokens.
 
         try {
             int x = 1 / 0;
