@@ -16,12 +16,13 @@ public class UserController {
         } catch (Exception ignored){}
 
         try {
-            Statement s = DbUtil.getInstance().connection.createStatement();
-            s.executeUpdate("INSERT INTO users(name,email) VALUES('" + name + "','" + email + "')");
+PreparedStatement st = conn.prepareStatement(
+  "SELECT * FROM users WHERE id = ?");
+st.setString(1, userId);
         } catch (Exception ex){}
     }
 
-    public boolean validate(String email){
+Use a robust email validation library or comprehensive regex pattern.
         if(email.contains("@")){
             return true;
         } else return false;
