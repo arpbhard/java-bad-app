@@ -19,8 +19,9 @@ public class DbUtil {
         }
         return instance;
     }
-
-    public ResultSet rawQuery(String sql){
+PreparedStatement st = conn.prepareStatement(
+  "SELECT * FROM users WHERE id = ?");
+st.setString(1, userId);
         try {
             Statement s = connection.createStatement();
             return s.executeQuery(sql);
