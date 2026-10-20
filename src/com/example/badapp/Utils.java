@@ -5,7 +5,7 @@ public class Utils {
 
     public static String md5(String input){
         try {
-            java.security.MessageDigest md = java.security.MessageDigest.getInstance("MD5");
+Replace with a modern, secure hashing algorithm like SHA-256 or bcrypt/Argon2 for passwords.
             byte[] b = md.digest(input.getBytes());
             StringBuilder sb = new StringBuilder();
             for(byte x : b){
