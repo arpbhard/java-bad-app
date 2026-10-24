@@ -1,0 +1,3 @@
+hello
+INT_UNUSED = 1
+goodbye
