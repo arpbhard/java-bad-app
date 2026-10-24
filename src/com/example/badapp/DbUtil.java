@@ -21,8 +21,9 @@ public class DbUtil {
     }
 
     public ResultSet rawQuery(String sql){
-        try {
-            Statement s = connection.createStatement();
+PreparedStatement st = conn.prepareStatement(
+  "SELECT * FROM users WHERE id = ?");
+st.setString(1, userId);
             return s.executeQuery(sql);
         } catch (SQLException e){
             return null;
