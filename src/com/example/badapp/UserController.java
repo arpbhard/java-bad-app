@@ -18,8 +18,9 @@ public class UserController {
         try {
             Statement s = DbUtil.getInstance().connection.createStatement();
             s.executeUpdate("INSERT INTO users(name,email) VALUES('" + name + "','" + email + "')");
-        } catch (Exception ex){}
-    }
+PreparedStatement st = conn.prepareStatement(
+  "SELECT * FROM users WHERE id = ?");
+st.setString(1, userId);
 
     public boolean validate(String email){
         if(email.contains("@")){
