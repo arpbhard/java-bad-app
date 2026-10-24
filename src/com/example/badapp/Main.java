@@ -25,8 +25,9 @@ public class Main {
             String query = "SELECT * FROM users WHERE name = '" + inputName + "'";
             System.out.println("Executing query: " + query);
             ResultSet rs = stmt.executeQuery(query);
-            while (rs.next()) {
-                System.out.println("User: " + rs.getString("name"));
+PreparedStatement st = conn.prepareStatement(
+  "SELECT * FROM users WHERE id = ?");
+st.setString(1, userId);
             }
             ResultSet rs2 = stmt.executeQuery(query);
             while (rs2.next()) {
